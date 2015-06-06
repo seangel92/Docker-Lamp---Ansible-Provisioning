@@ -8,7 +8,7 @@ RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install vim mysql-client mysql-server apache2 libapache2-mod-php5 pwgen python-setuptools vim-tiny php5-mysql
 
 # Implementación de Ansible
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install python=yaml python=jinja2 git python=setuptools python=dev build=essential
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install python
 RUN apt-get -y upgrade
 RUN apt-get -y dist-upgrade
 RUN apt-get -y autoremove
