@@ -13,7 +13,7 @@ RUN apt-get -y upgrade
 RUN apt-get -y dist-upgrade
 RUN apt-get -y autoremove
 RUN sudo easy_install pip
-RUN sudo pip install -U ansible
+RUN sudo pip install -y ansible
 ADD inventory /etc/ansible/hosts
 ADD ./ /tmp/
 WORKDIR /tmp/
