@@ -1,0 +1,6 @@
+---
+- hosts: all
+  sudo: yes
+  handlers:
+    - name: restart apache2
+      action: service name=apache2 state=restarted
