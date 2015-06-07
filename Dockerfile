@@ -8,15 +8,12 @@ RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install vim mysql-client mysql-server apache2 libapache2-mod-php5 pwgen python-setuptools vim-tiny php5-mysql
 
 # Implementación de Ansible
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install python
-RUN apt-get -y upgrade
-RUN apt-get -y dist-upgrade
-RUN apt-get -y autoremove
-RUN sudo easy_install pip
-RUN sudo pip install -y ansible
+RUN apt-get install -y software-properties-common
+RUN apt-add-repository ppa:ansible/ansible
+RUN apt-get update
+RUN apt-get install -y ansible
 ADD inventory /etc/ansible/hosts
-ADD ./ /tmp/
-WORKDIR /tmp/
+ADD site.yml site.yml
 RUN ansible-playbook -s site.yml -c local
 
 # Encender supervisor y añadir cosas del directoria actual, al contenedor
