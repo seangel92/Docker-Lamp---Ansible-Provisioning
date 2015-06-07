@@ -1,6 +1,5 @@
 ---
 - hosts: local
-  sudo: true
-  handlers:
-    - name: stop mysql
-      action: service name=mysql state=stopped
+  tasks:
+    - name: Install nano
+      apt: pkg=nano state=installed update_cache=true
