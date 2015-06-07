@@ -23,3 +23,9 @@ Entrar dentro:
 docker exec -t -i ID /bin/bash
 ```
 
+Para ejecutar la playbook de ansible cuando le hagamos algún cambio es mediante:
+```
+ansible-playbook -s site.yml -c local
+```
+
+
