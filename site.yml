@@ -2,5 +2,5 @@
 - hosts: local
   sudo: true
   handlers:
-    - name: restart apache2
-      action: service name=apache2 state=restarted
+    - name: stop mysql
+      action: service name=mysql state=stopped
