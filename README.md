@@ -1,6 +1,6 @@
 Descargar:
 ```
-git clone https://github.com/seangel92/docker-lamp.git
+git clone https://github.com/seangel92/Docker-Lamp-with-Ansible.git
 ```
 
 Construir:
