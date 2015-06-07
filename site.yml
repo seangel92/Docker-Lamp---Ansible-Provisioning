@@ -3,3 +3,12 @@
   tasks:
     - name: Install nano
       apt: pkg=nano state=installed update_cache=true
+
+# Ejemplo para instalar y configurar algo (No podemos indagar más porque no sabemos python 
+# y no entendemos como se harían otras cosas como modificar parametros y otras configuraciones)
+#  tasks:
+#    - name: Install algo
+#      apt: pkg=algo state=installed update_cache=true
+#  handlers:
+#    - name: restart algo
+#      action: service name=algo state=restarted
