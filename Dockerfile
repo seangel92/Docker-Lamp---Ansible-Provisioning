@@ -1,3 +1,4 @@
+#Sistema operativo y Creador
 FROM ubuntu:latest
 MAINTAINER Angel Rubio <seangel1992@gmail.com>
 
