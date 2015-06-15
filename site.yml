@@ -2,7 +2,10 @@
 - hosts: local
   tasks:
     - name: Install nano
-      apt: pkg=nano state=installed update_cache=true
+      apt: pkg=nano state=removed update_cache=true
+    - name: Create directory for php5-fpm logs
+      file: path=/var/log/php5-fpm state=directory owner=root group=root mode=0700
+
 
 # Ejemplo para instalar y configurar algo (No podemos indagar más porque no sabemos python 
 # y no entendemos como se harían otras cosas como modificar parametros y otras configuraciones)
